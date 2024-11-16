@@ -11,7 +11,7 @@ interface UserCreationAttrs {
     telegramId: number
     patronymic?: string
     photoUrl?: string
-    name?: string | null
+    username?: string | null
 }
 
 @Table({tableName: 'users'})
@@ -20,7 +20,7 @@ export class User extends Model<User, UserCreationAttrs> {
     id: string
     
     @Column({type: DataType.STRING, allowNull: true})
-    name: string | null
+    username: string | null
 
     @Column({type: DataType.BIGINT, allowNull: false, unique: true})
     telegramId: number

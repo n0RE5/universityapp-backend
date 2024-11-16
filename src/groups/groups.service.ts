@@ -71,7 +71,7 @@ export class GroupsService {
         }
         try {
             const timestamp = formatDate(new Date())
-            const message_payload = `<blockquote><b>От кого:</b> ${user.firstName} ${user.lastName} ${user.name ? `<b>@${user.name}</b>`: ''}%0A<b>Дата:</b> ${timestamp}</blockquote>%0A<b>Сообщение:</b> ${dto.message}`
+            const message_payload = `<blockquote><b>От кого:</b> ${user.firstName} ${user.lastName} ${user.username ? `<b>@${user.username}</b>`: ''}%0A<b>Дата:</b> ${timestamp}</blockquote>%0A<b>Сообщение:</b> ${dto.message}`
             const observable = this.httpService.get(`${TELEGRAM_BOT_API_URL}sendMessage?chat_id=${headman.telegramId}&text=${message_payload}&parse_mode=HTML`)
             await firstValueFrom(observable)
             return

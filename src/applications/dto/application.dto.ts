@@ -18,6 +18,6 @@ export class ApplicationDto {
         this.lastName = application.user.lastName
         this.patronymic = application.user.patronymic
         this.photoUrl = application.user.photoUrl
-        this.name = application.user.name
+        this.name = application.user.username
     }
 }

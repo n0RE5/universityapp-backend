@@ -3,5 +3,5 @@ export default class CreateUserDto {
     readonly lastName: string
     readonly telegramId: number
     readonly photoUrl?: string
-    readonly name?: string
+    readonly username?: string
 }

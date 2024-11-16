@@ -20,7 +20,7 @@ export class AuthService {
             user = await this.userService.create({
                 firstName: userdata.first_name,
                 lastName: userdata.last_name,
-                name: userdata.name,
+                username: userdata.username,
                 telegramId: userdata.id,
                 photoUrl: userdata.photo_url
             })
@@ -28,7 +28,8 @@ export class AuthService {
             user = await user.update({
                 firstName: user.firstName ? user.firstName : userdata.first_name,
                 lastName: user.lastName ? user.lastName : userdata.last_name,
-                photoUrl: userdata.photo_url
+                photoUrl: userdata.photo_url,
+                username: userdata.username || null
             })
         }
         return {
