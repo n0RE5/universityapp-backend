@@ -42,8 +42,8 @@ export class GroupsService {
         })
         if (!group) {
             throw new HttpException({
-                message: 'Group has no headman',
-                error_id: 'group_has_no_headman'
+                message: 'Group with given id not found',
+                error_id: 'group_not_found'
             }, 404)
         }
         return group
