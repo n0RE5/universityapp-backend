@@ -23,6 +23,8 @@ const corsOptions: CorsOptions = {
       'http://localhost',
       'http://tg-mini-app.local',
       'http://tg-webapp.local',
+      'https://n0re5.github.io/universityapp/',
+      'https://n0re5.github.io/',
       '*'
   ]
 }
