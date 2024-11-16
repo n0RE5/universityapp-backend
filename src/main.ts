@@ -19,14 +19,7 @@ const setupSwagger = (app: INestApplication) => {
 
 const corsOptions: CorsOptions = {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  origin: [
-      'http://localhost',
-      'http://tg-mini-app.local',
-      'http://tg-webapp.local',
-      'https://n0re5.github.io/universityapp/',
-      'https://n0re5.github.io/',
-      '*'
-  ]
+  origin: '*'
 }
 
 async function bootstrap() {
